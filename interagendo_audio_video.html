@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo Àudie e Vídeo</title>
+</head>
+
+<body>
+
+    <h1>Inserido música e Vídeo</h1>
+    <p>Para inserir uma música Mp3 em sua pagina, o arquivo deve estar em umapasta no site,no nosso caso temos uma
+        pasta chamada média </p>
+
+    <audio controls id="audio">
+        <source src="midia/metalica_nothing.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+    <br>
+    <br>
+
+    <section>
+        <p> Veja o video a seguir:</p>
+        <video controls>
+            <source src="midia/london.mp4" type="video/mp4">
+            seu navigador não suporta o elemento de vídeo
+        </video>
+
+    </section>
+
+    <video controls>
+        <source src="midia/pink-floyd.mp4" type="vídeo/mp4">
+        <track kind="subtitles" srclang="pt-br" src="midia/legenda-ptbr.vtt" label="Português Brasil" default>
+
+        <track kind="subtitules" srclang="en" src="midia/legenda-en.vtt" label="Inglês">
+
+    </video>
+
+
+    <main>
+        <p>Existe outra forma de inserir video sem ter o local de arquivo,
+         usando o site <b>Youtube</b>.</p>
+
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/fukGbiPuBjU?si=WJykFSzf5vJOtWAx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </main>
+       
+
+</body>
+
+</html>

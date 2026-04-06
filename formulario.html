@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+   <h1>Trabalhando com Tags formulários</h1>
+   <hr>
+   <p> Elementos para formulários são voltados à interação do usario.Entrada de dados, processameto para manipulação de dados entre outros.</p>
+   <p>Formulário de HTML são um <i>INTERFACE</i>.</p>
+   <p> Para que o Formulário funcione é necessário combiná-los com algumas linguens de programação</p>
+
+   <form action="#" methods="post"> <!-- <form> define o formulário; action = destino do formulário; method = define a forma de envio do formulário-->
+           <div> <!-- <div> container genérico de bloco.ultil para agrupar elementos sem significado semãntico--> 
+             <label for="nome">Nome</label> <!--<label> é o título do campo, o ao campo via for/id-->
+           <input type="text" id="nome" name="nome" placeholder="" required><!-- input é um campo de entrada de dados; type definino qual o tipo de dados a ser recebido (text é campo de text livre);
+           id inditificsdor unico do campo para label e scripts;
+           name é nome do campo usado no envio do formulário; placeholder dica textual dentro do campo;
+           required é a forma de dizer que o campo é obligatório-->
+
+           </div>
+
+           <p> 
+
+              <label form="email">Email:</label>
+              <input type="email" name="nome" id="email"
+              required placeholder="seuemail@gmail,com">
+          </p>
+
+           <p>
+
+            <label for="celular">Celular</label>
+            <input type="cel" name="celular" id="celular"
+             placeholder="(xx)xxxxx-xxxx">
+
+           </p>
+
+           <p>Escolha um instrumento</p>
+           <p>
+              <input type="radio" name="corda" id="instrumento-violao" value="viiolao"> <!--type é o radio: opção unica no grupo; id significado o controle; name=corda; grupo de opções.;o value:é o valor enviado ao selecionar -->
+            <label for="instrumento-violao">Violao</label>
+            <input type="radio" name="corda" value="violino" id="instrumento-violao">
+            <label for="instrumento-violino">Violino</label>
+
+
+            <input type="radio" name="corda" value="viola" id="instrumento-viola">
+            <label for="instrumento-viola">Viola</label>
+
+           </p>
+
+           <p>Interesses:</p>
+           <p>
+              <input type="checkbox" name="interesses" id="interesses-htm5" value="html5"> <!--type é o checkbox: opção de multiplia escolha; id significado o controle; name= array de opção; o value:é o valor enviado ao selecionar -->
+            <label for="interesse-html5">HTML5</label>
+
+            <input type="Checkbox" name="interesses" value="csss3" id="interesse-css3">
+            <label for="interesse-css3">Csss3</label>
+
+
+            <input type="radio" name="corda" value="viola" id="instrumento-viola">
+            <label for="instrumento-viola">Viola</label> 
+        </p>
+           
+            <label for="nascimento">Nascimento</label>
+            <input type="date" id="nascimento" name="nascimento"> <!-- type date e seletor de data;id/nome para envio de dados -->
+
+        <p> 
+            <label for="cor"> qual é a sua cor favorita<label>
+            <input type="color" id="cor" name="cor">
+        </p>
+
+        <p>
+            <label for="idade"> qual é sua idade</label>
+            <input type="number" name="idade"
+            id="idade" min="1" max="150">
+        </p>
+
+        <p>
+            <label for="assunto">Assunto</label>
+            <select name="assunto" id="assunto">
+            <!--campo de seleção-->
+              <option value="">Selecione um asunto</option> <!--valor vazio é como se fosse o placeholder-->
+              <option value="elogios">Elogios</option>
+              <option value="reclamacao">Reclamacao</option>
+              <option value="outros">Outros</option>
+            </select>
+        </p>
+
+        <p> 
+            <label for="mesagem">Mesagem:</label>
+            <textarea name="mesagem" id="mesagem" cols="50"></textarea> <!--(textarea) :campo de texto multilinhas; cols: largura em caracteres; rows; linhas visiveís -->
+        </p>
+         
+        <!-- Botão de envio -->
+         <button type="submit">ENVIAR</button>
+        
+   </form>
+</body>
+
+</html>
