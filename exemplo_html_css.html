@@ -18,8 +18,78 @@
         padding: 0%; /*sem espaçamento intero no body*/
         background-color: #F5DEB3; /*Cor do fundo de base*/
         background-image: url(img/textura01.jpg); 
-       /*Imagem de fundocarre4gada da pasta img*/
+       /*Imagem de fundo carregada da pasta img*/
+       font-family: Arial, Helvetica, sans-serif;/*Fonte reserva,caso não carregue a font principal*/
+       font-family: "Playwrite NO",cursive; /*Font importada do google font usada como principal*/
+       font-optical-sizing: auto; /*Ajuste de renderização da font para melhor legibilidade*/
+       font-weight: 500;/*Peso da fonte*/
+       font-style: normal; /*estilo normal,sem itálico*/
     }
+
+    /*Estilo do título principal*/
+    
+    h1 {
+        background-color: black;/* cor do fundo do título*/
+        color: white; /*cor do texto dentro do título*/
+        text-align: center;/*Alinhar textp do centro*/
+        padding: 20px; /*Espaçamento intero ao redor do conteúdo*/
+        border-radius: 15px; /*cantos arredondados do bloco*/
+        border-bottom: solid red 5px;/* borda inferior vermelha e grossa*/
+    }
+
+    /*Linha Horizontal estílizada*/
+    hr{
+        width: 70%; /*altura da linha em percentual do elemento pai*/
+        height: 15px;/*altura da linha horizontal*/
+        background-color: purple;/* cor do fundo da linha*/
+        border: none; /*remove a barra padrão do hr*/
+        border-radius: 5px; /* arredonda as extremkidades da linha*/
+        border-bottom: solid rgb(255,232,11); /*Borda inferior amarela*/
+    }
+
+    h2 {
+        border-bottom-style: solid; /*estulo de borda inferior*/
+        border-bottom-color: red;/*cor da borda inferior*/
+        border-bottom-width: 5px; /* espessura da borda inferior*/
+        display: inline;/* exibir o títulona mesma linha,sem quebrar linha automaticamente*/
+        padding-bottom: 8px;/* espaçamento entre o texto e a borda inferior*/
+        color: white; /*cor do texto so subtítulo*/
+        text-shadow: black 2px 2px 5px, red -2px -2px 5px; /* sobra de texto com dois efeitos*/
+        margin: 20px; /* espaçamento esterno ao redor subtitulo*/
+        text-transform: lowercase; /*força o texto a ficar minusculo*/
+    }
+
+    /*Estilo para todos os parágrafo*/
+    p {
+        margin-top: 10px; /*Espaçamento acima do paragrafo*/
+        margin-bottom: 10px; /* espaçamento abaixo do paragrafo*/
+        font-size: 18px; /*tamanho da fonte do texto*/
+        word-spacing: 10px;/* espaçamento entre as palavras*/
+        letter-spacing: 3px;/*espaçamento entre as letras*/
+        text-align: justify;/* justifica o testo nas duas margens*/
+    }
+
+    /*Estilo do container div que envolve a lista*/
+    div{
+        align-items: center; /* só funciona com display:flex;não tem efeito agora*/
+        justify-content: center;/*só funciona com display:flex; não tem efeito agora*/
+        width: 670px; /*Largura fixa para container*/
+        margin-left: 280px;/*desloca o container para direita*/
+    }
+
+    /*Estilo dos itens da lista*/
+    li {
+        list-style: square;/*marcador em forma de quadrado*/
+        background-color: #F5DEB3;/*cor do fundo*/
+        width: 21%;/*largura do item da lista*/
+    }
+
+    /*Estilo para imagens*/
+
+    img{
+        border-radius: 20px;/*arredonda os cantos da imagens*/
+    }
+
    </style>
 </head>
 
