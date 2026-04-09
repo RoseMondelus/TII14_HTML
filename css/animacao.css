@@ -1,4 +1,4 @@
-*{
+anima* {
     margin: 0;
     /*zerando a margem*/
     padding: 0;
@@ -12,13 +12,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f9;
     color: #222;
-    line-height: 1.6; /*espaçamento entre as linhas*/
+    line-height: 1.6;
+    /*espaçamento entre as linhas*/
 }
 
 /*topo da pagina*/
 
 .topo {
-    background: linear-gradient(135deg,#6a0dad,#9c27b0);/*um gradiente em degradé*/
+    background: linear-gradient(135deg, #6a0dad, #9c27b0);
+    /*um gradiente em degradé*/
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -26,7 +28,9 @@ body {
 
 .topo h1 {
     margin-bottom: 10px;
-    font-size: 2,2rem/* tamanho da fonte*/;
+    font-size: 2, 2rem
+        /* tamanho da fonte*/
+    ;
 }
 
 .topo p {
@@ -36,8 +40,10 @@ body {
 /*container principal*/
 .container {
     width: 90%;
-    max-width: 1000px;/* limite maximo da tela*/
-    margin: 30px auto;/* centralizar horizontalmente*/
+    max-width: 1000px;
+    /* limite maximo da tela*/
+    margin: 30px auto;
+    /* centralizar horizontalmente*/
 }
 
 /*Blocos fde conteúdos*/
@@ -46,70 +52,159 @@ body {
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);/*Sombranos cards*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /*Sombranos cards*/
 }
+
 .bloco h2 {
     margin-top: 10px;
     color: #6a0dad;
 }
+
 .bloco p {
     margin-bottom: 20px;
 }
 
 /*Bloco 2 - Transformação*/
-  .caixa-transform {
+.caixa-transform {
     width: 100px;
     height: 100px;
     background-color: #00bcd4;
     border-radius: 10px;
 
     /*Transição suave*/
-     transition: 0.5s;
-  }
+    transition: 0.5s;
+}
 
-  .caixa-transform:hover {
+.caixa-transform:hover {
     /* Rotate = girar o elemento
        Scale = aumento o tamanho
     */
-    transform: rotate(20deg); scale:(1.15);
-  }
+    transform: rotate(20deg);
+    scale: (1.15);
+}
 
-  /*Bloco 3 = Animação em movimento*/
+/*Bloco 3 = Animação em movimento*/
 
-  .area-animacao {
+.area-animacao {
     width: 100%;
     height: 120px;
-    border: 2px dashed #ccc;/*Borda pontilhada*/
+    border: 2px dashed #ccc;
+    /*Borda pontilhada*/
     border-radius: 10px;
-    position: relative; /*Necessário para posiciamento interno*/
-    overflow: hidden;/*Esconde o que sair da área*/
+    position: relative;
+    /*Necessário para posiciamento interno*/
+    overflow: hidden;
+    /*Esconde o que sair da área*/
     padding: 10px;
-  }
+}
 
-  /*Caixa que vai se mover*/
+/*Caixa que vai se mover*/
 
-  .caixa-movendo {
+.caixa-movendo {
     width: 80px;
     height: 80px;
     background-color: #ff9800;
     border-radius: 12px;
-    position: absolute; /*Permite movimentação dentro da área*/
+    position: absolute;
+    /*Permite movimentação dentro da área*/
     top: 20px;
 
     /*Animação
     |  nome| duração | repetição | direção */
     animation: moverCaixa 3s infinite alternate;
-  }
+}
 
-  /*KeyFrame: Define o inicio e o fim da animação*/
-  @keyframes moverCaixa {
+/*KeyFrame: Define o inicio e o fim da animação*/
+@keyframes moverCaixa {
+
     /*Estado inicial*/
-    from{
+    from {
         left: 0;
     }
+
     /*estado final*/
     to {
         left: calc(100% - 80px);
         /*vai determinar até onde ele vai */
     }
-  }
+}
+
+/*Bloco 4 = Texto aparecendo*/
+.texto-aparecendo {
+    opacity: 0;
+    /* Começar invisivel*/
+
+    /*forward = matém o estado final*/
+    animation: aparecerTexto 2 forwards;
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /*Começar mais baixo*/
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(0px);
+        /*Sobe para a posição normal*/
+    }
+}
+
+/*Bloco 5 - Bola subindo e decendo*/
+.bola {
+    width: 80px;
+    height: 80px;
+    background-color: #e91e63;
+    border-radius: 50%;
+    /*forma circular*/
+
+    /* alternate = vai e voltar
+    |     ease-in-out = suavizar inicio e fim
+    */
+    animation: subirDescer 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes subirDescer {
+    from {
+        transform: translate(0);
+        /*posição inicial*/
+    }
+
+    to {
+        transform: translateY(-100px);
+        /*sobe*/
+
+    }
+}
+
+/*Bloco 6 - Card Interativo*/
+
+.card {
+    background-color: #fafafa;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+
+    /*transição suave*/
+    transition: 0.4s;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+
+}
+
+.card:hover {
+    /*Leve movimento para cima*/
+    transform: translateY(-8px) scale(1.05);
+    /*Sombra mais forte*/
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+
+    border-color: #9c27b0;
+    /*Destaque na borda*/
+}
