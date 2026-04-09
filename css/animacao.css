@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    /*zerando a margem*/
+    padding: 0;
+    /*zerando os espaçamentos*/
+    box-sizing: border-box;
+    /*faz a largura e altura incluirem padding e borda*/
+}
+
+/*Estilo do corpo da pagina*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    color: #222;
+    line-height: 1.6; /*espaçamento entre as linhas*/
+}
+
+/*topo da pagina*/
+
+.topo {
+    background: linear-gradient(135deg,#6a0dad,#9c27b0);/*um gradiente em degradé*/
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.topo h1 {
+    margin-bottom: 10px;
+    font-size: 2,2rem/* tamanho da fonte*/;
+}
+
+.topo p {
+    font-size: irem;
+}
+
+/*container principal*/
+.container {
+    width: 90%;
+    max-width: 1000px;/* limite maximo da tela*/
+    margin: 30px auto;/* centralizar horizontalmente*/
+}
+
+/*Blocos fde conteúdos*/
+.bloco {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);/*Sombranos cards*/
+}
+.bloco h2 {
+    margin-top: 10px;
+    color: #6a0dad;
+}
+.bloco p {
+    margin-bottom: 20px;
+}
+
+/*Bloco 2 - Transformação*/
+  .caixa-transform {
+    width: 100px;
+    height: 100px;
+    background-color: #00bcd4;
+    border-radius: 10px;
+
+    /*Transição suave*/
+     transition: 0.5s;
+  }
+
+  .caixa-transform:hover {
+    /* Rotate = girar o elemento
+       Scale = aumento o tamanho
+    */
+    transform: rotate(20deg); scale:(1.15);
+  }
+
+  /*Bloco 3 = Animação em movimento*/
+
+  .area-animacao {
+    width: 100%;
+    height: 120px;
+    border: 2px dashed #ccc;/*Borda pontilhada*/
+    border-radius: 10px;
+    position: relative; /*Necessário para posiciamento interno*/
+    overflow: hidden;/*Esconde o que sair da área*/
+    padding: 10px;
+  }
+
+  /*Caixa que vai se mover*/
+
+  .caixa-movendo {
+    width: 80px;
+    height: 80px;
+    background-color: #ff9800;
+    border-radius: 12px;
+    position: absolute; /*Permite movimentação dentro da área*/
+    top: 20px;
+
+    /*Animação
+    |  nome| duração | repetição | direção */
+    animation: moverCaixa 3s infinite alternate;
+  }
+
+  /*KeyFrame: Define o inicio e o fim da animação*/
+  @keyframes moverCaixa {
+    /*Estado inicial*/
+    from{
+        left: 0;
+    }
+    /*estado final*/
+    to {
+        left: calc(100% - 80px);
+        /*vai determinar até onde ele vai */
+    }
+  }
