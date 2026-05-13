@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    <script>
+    //atividade
+    // agora monstre se o numero é par ou impar
+    
+    //  atividade
+    //  crie u array chamada alunos com pelo menos 5 nomes
+    //  adicione um aluno novo ao final e outro no inicio
+    // remova o primeiro aluno da lista
+    // encontre o indice de um nome especifico
+    // filtre os alunos cujo nome tenha mais de 5 letras
+
+    let alunos = ['diego','maria','joão','romeu','julieta'];
+
+    alunos.push('mariana');
+    console.log(alunos);
+    alunos.unshift('paulo');
+    console.log(alunos);
+    alunos.shift('diego');
+    console.log(alunos);
+
+    console.log(alunos.indexOf('juliete'));
+
+    console.log(alunos.filter(nome => nome.length >5))
+    </script>
+</body>
+</html>
